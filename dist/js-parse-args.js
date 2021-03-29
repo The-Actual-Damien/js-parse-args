@@ -26,9 +26,9 @@
 
 	JSPArgs.clone = function (src) {
 	  if (typeof src === 'object') {
-	    var target = {};
+	    const target = {};
 
-	    for (var prop in src) {
+	    for (const prop in src) {
 	      if (src.hasOwnProperty(prop)) {
 	        target[prop] = src[prop];
 	      }
@@ -41,7 +41,7 @@
 	};
 
 	JSPArgs.prototype.parse = function () {
-	  for (var $_key in this.defaults) {
+	  for (const $_key in this.defaults) {
 	    if (this.defaults.hasOwnProperty($_key)) {
 	      if (true === this.nested && typeof this.defaults[$_key] === 'object') {
 	        this.args[$_key] = new JSPArgs(this.args[$_key], this.defaults[$_key], this.nested);
