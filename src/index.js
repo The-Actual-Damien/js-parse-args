@@ -6,7 +6,7 @@ function JSPArgs( $args = {}, $defaults = {}, $is_nested = false ) {
 	return this.args;
 }
 
-JSPArgs.clone = function( src ) {
+JSPArgs.clone = src => {
 	if( typeof src === 'object' ) {
 		let target = {};
 		for( let prop in src ) {

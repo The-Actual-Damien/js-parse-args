@@ -1,8 +1,8 @@
-(function (global, factory) {
+(((global, factory) => {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.parse_args = factory());
-}(this, (function () { 'use strict';
+})(this, (function () { 'use strict';
 
 	function JSPArgs($args, $defaults, $is_nested) {
 	  if ($args === void 0) {
@@ -24,7 +24,7 @@
 	  return this.args;
 	}
 
-	JSPArgs.clone = function (src) {
+	JSPArgs.clone = src => {
 	  if (typeof src === 'object') {
 	    var target = {};
 
